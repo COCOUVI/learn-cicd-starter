@@ -3,14 +3,14 @@ package main
 import (
 	"database/sql"
 	"embed"
+	"github.com/go-chi/chi"
+	"github.com/go-chi/cors"
+	"github.com/joho/godotenv"
 	"io"
 	"log"
 	"net/http"
 	"os"
 	"time"
-	"github.com/go-chi/chi"
-	"github.com/go-chi/cors"
-	"github.com/joho/godotenv"
 
 	"github.com/bootdotdev/learn-cicd-starter/internal/database"
 
@@ -23,9 +23,10 @@ type apiConfig struct {
 
 //go:embed static/*
 var staticFiles embed.FS
+
 func unused() {
-    // this function does nothing
-    // and is called nowhere
+	// this function does nothing
+	// and is called nowhere
 }
 
 func main() {
@@ -98,6 +99,6 @@ func main() {
 		ReadHeaderTimeout: 5 * time.Second,
 	}
 
-	log.Println("Serving on port: "+port) // #nosec G706
+	log.Println("Serving on port: " + port) // #nosec G706
 	log.Fatal(srv.ListenAndServe())
 }
