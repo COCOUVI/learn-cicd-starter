@@ -25,6 +25,6 @@ Alexandro's version of Boot.dev's Notely app.
 
 # Notely App
 
-![Tests Status](https://github.com/Alexandro-c/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)
+![Tests Status](https://github.com/COCOUVI/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)
 
 Alexandro's version of Boot.dev's Notely app.
